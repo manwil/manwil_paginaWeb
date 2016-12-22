@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html moznomarginboxes mozdisallowselectionprint>
+<head>
+	<title>MANWIL TICONA S.R.L.</title>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="bootstrap3/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.custom.css">
+    
+  <!-- SCRIPT -->
+  <script src="js/jquery-3.1.1.min.js"></script>
+  <script src="js/angular.js"></script>
+  <script src="js/angular-animate.js"></script>
+  <script src="js/angular-sanitize.js"></script>
+  <script src="js/angular-route.js"></script>
+  <script src="js/ui-bootstrap-tpls-2.3.0.js"></script>
+  <script src="js/ng-grid.js"></script>
+  <script src="bootstrap3/js/bootstrap.min.js"></script>
+  <script src="js/NumeroALetras.js"></script>
+  <script src="js/redondeo.decimal.js "></script>
+  <script src="js/controller-view.js "></script>
+  <script src="./js/controller-cabecera.js "></script>
+  <script src="./js/HomeController.js "></script>
+  <script src="./js/empresa.controller.js "></script>
+  <script src="./js/contacto-controller.js "></script>
+  <script src="js/controller-producto.js "></script>
+  <script src="js/controller.jquery.js"></script>
+
+  
+<body ng-app="manwil_page">
+  <!-- particles.js container 
+  <div id="particles-js"></div>
+  -->
+  <div class="container background_image padding_x_0" ng-controller="controller-cabecera">
+    <div class="col-xs-offset-3 col-xs-6 col-md-offset-5 col-md-2 text-center margin_top_20">
+      <img src="img/logo_sinfondo.png" class="img-responsive">
+    </div>
+    <div class="col-md-offset-2 col-md-8 text-center">
+      <img src="img/letras.png" class="img-responsive">  
+    </div>
+
+    <div class="col-md-12 text-center margin_x_0">
+      <div class="col-md-3 margin_x_0"> <a href="#/inicio" class="inicio" ng-click="pintar_menu('inicio')"><div class=" padding_y_25 background_1_1"><i class="font-size-big">INICIO</i> </div></a></div>
+      <div class="col-md-3 margin_x_0"> <a href="#/empresa" class="empresa" ng-click="pintar_menu('empresa')"><div class=" padding_y_25 background_2_2"><i class="font-size-big">EMPRESA</i> </div></a></div>
+      <div class="col-md-3 margin_x_0"> <a href="#/producto" class="producto" ng-click="pintar_menu('producto')"><div class=" padding_y_25 background_3_3"><i class="font-size-big">PRODUCTOS</i> </div></a></div>
+      <div class="col-md-3 margin_x_0"> <a href="#/contacto" class="contacto" ng-click="pintar_menu('contacto')"><div class="padding_y_25 background_4_4"><i class="font-size-big">CONTACTO</i> </div></a></div>
+    </div>
+    <div class="col-md-12 height_100 figure_modify">
+      
+  </div>
+  </div>
+
+  <div class="container background_white padding_x_0">  
+    <div>
+      <div class="ng-view"></div>  
+    </div>
+    <div class="col-md-12"></div>
+  </div><!--/fin-->
+
+  <div class="container  padding_x_0 text-center">
+    <div class="footer">
+      <div class="col-md-4 padding_y_25">
+        
+        <p class="text-left color-white">Email 1: </p><p class="color-orange"> erick_manwil@outlook.es</p>
+
+        <p class="text-left color-white">Email 2: </p><p class="color-orange"> manwil.ticona.srl@gmail.com</p>
+
+        <p class="text-left color-white">Servicio al Cliente: </p><p class="color-orange"> Celular 69844789</p>
+
+        <p class="text-left color-white">Registro de Senansag: </p><p class="color-orange"> 040301020002</p>
+
+      </div>
+      <div class="col-md-4 padding_y_25">
+      
+        <p class="text-left color-white">Planta Procesadora:</p> <p class="color-orange">Zona Villa Adela entre calle José Gutierrez y Avenida Litoral</p>
+
+        <p class="text-left color-white">Almacén Central: </p> <p class="color-orange"> Zona Villa Dolores calle 5 Nº 118</p>
+
+        <p class="text-left color-white">Central de Ventas: </p> <p class="color-orange"> Telefono 2824950 - 69844705 - 69844789</p>
+
+
+      </div>
+      <div class="col-md-4 padding_y_25">
+
+        <div id="map" class="mapa_show"></div>
+
+      </div>
+    </div>
+    <div class="col-md-12 text-center padding_y_10 background_black">
+        Copyright © Embutidos MANWIL SRL. 2016. Aviso Legal | La Paz Bolivia.
+    </div>
+  </div>
+  <!-- script for particle 
+  <script src="js/particles.js"></script>
+  <script src="js/app.particle.js"></script>
+   <script src="js/ui-bootstrap.min.js"></script>
+  -->
+  
+    <script type="text/javascript">
+
+  var map;
+  var marker;
+  function initMap() {
+    var myLatLng = {lat: -16.510929, lng: -68.160982};
+
+      map = new google.maps.Map(document.getElementById('map'), {
+        center: {lat: -16.510929, lng: -68.160982},
+        zoom: 16
+      });
+
+      marker = new google.maps.Marker({
+        position: myLatLng,
+        map: map,
+        title: 'MANWIL TICONA SRL.',
+        draggable: false,
+        icon: 'img/icono_map.png',
+        animation: google.maps.Animation.DROP
+      });
+      var contentString = '<div id="content">'+
+        '<div id="siteNotice" class="text-center"><img src="img/manwil_foto.png" class="img-pin">'+
+        '</div>'+
+        '<h1 id="firstHeading" class="firstHeading">EMBUTIDOS MANWIL SRL.</h1>'+
+        '<div id="bodyContent">'+
+        '<p><b>Ubicación: </b>'+
+        ' Zona Villa Dolores calle 5, N 118, Telf. 2824950'+
+        '.</p>'+
+        '</div>'+
+        '</div>';
+
+      var infowindow = new google.maps.InfoWindow({
+        content: contentString,
+        maxWidth: 150
+
+      });
+      marker.addListener('click', function() {
+        infowindow.open(map, marker);
+      });
+  }
+  </script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDfax6_WCsn-hnnjfxG0Y2BrBs2HHmtMiE&callback=initMap">
+  </script>
+</body>
+</html>
