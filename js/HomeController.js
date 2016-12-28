@@ -16,7 +16,7 @@ angular.module('manwil_page')
     		/*var newWidth = 600 + slides.length + 1;*/
     		slides.push({
       		image: 'img/' + currIndexImage +".jpg",
-      		text: ['Nice image','Awesome photograph','That is so cool','I love that'][slides.length % 4],
+      		text: ['Calidad','Sabor','Variedad'][slides.length % 4],
       		id: currIndex++
     		});
     		currIndexImage ++;

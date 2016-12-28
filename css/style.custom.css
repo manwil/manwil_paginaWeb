@@ -51,7 +51,7 @@ html, body {
     font-size: 14px;
 }
 body{
-  background: rgba(0, 0, 0, 0) url("../img/fondo--1.jpg") repeat;
+  background: rgba(0, 0, 0, 0) url("../img/fondo9.jpg") repeat;
   font: oblique 120% sans-serif ;
   background-attachment: fixed;
   background-position: center;
@@ -412,7 +412,7 @@ a.link{
   border-bottom:1px solid #FF5000;
 }
 .background-transparent{
-  background-color: rgba(255,255,255,0.3);
+  background-color: rgba(255,255,255,0.0);
 }
 .background-imagen-1{
    /* The image used */
@@ -704,4 +704,14 @@ animation-direction: reverse;
 }
 .background_orange_light{
   background: rgba(247, 177, 118, 0.2);
+}
+.carousel-caption h4{
+  display: none;
+}
+.dropdown-menu > li > a {
+  color: #fff;
+}
+.btn-default:hover, .btn-default:focus, .btn-default:active{
+  background: #FF5000;
+  color: white; 
 }

@@ -12,7 +12,7 @@ angular.module('manwil_page')
     			case 2:
         			$scope.background = "background_2";
                     $scope.titulo = "Salchicha tipo Viena sin piel o en paquete";
-    				$scope.imagen = "img/salchicha_paqueta1.png";
+    				$scope.imagen = "img/salchicha_paquete.jpg";
         			$scope.mensaje= "La salchicha es un embutido cocido, elaborado sobre la base de carne de cerdo o carne de cerdo y vacuno, con el agregado de tocino, sal y especias, escaldadas (cocidas) y luego ahumadas hasta obtención de un color moreno claro superficial”. Las proteínas proceden de la carne.";
         			break;
         		case 3:
@@ -57,6 +57,12 @@ angular.module('manwil_page')
     				$scope.imagen = "img/tocino1.jpg";
         			$scope.mensaje= "Ahumado natural. Exquisito. Elaborado con panceta de cerdo Premium.";
         			break;
+                case 10:
+                    $scope.background = "background_1";
+                    $scope.titulo = "Mortadelas";
+                    $scope.imagen = "img/mortadelas.jpg";
+                    $scope.mensaje= "Delicioso sabor y variedad.";
+                    break;
     			default:
         			$scope.background = "";
                     $scope.titulo = "";
